@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מריאן הי מריאן הא</title>
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --bg: #fffdf8;
+    --fg: #1d1b16;
+    --muted: #6b665b;
+    --accent: #b4561f;
+    --bar: #f3eee2;
+    --line: #ddd5c3;
+    --btn: #ffffff;
+    --size: 28px;
+    color-scheme: light;
+  }
+  :root[data-theme="dark"] {
+    --bg: #14130f;
+    --fg: #f4efe3;
+    --muted: #a9a290;
+    --accent: #f0a56a;
+    --bar: #1f1d17;
+    --line: #38342a;
+    --btn: #2a2820;
+    color-scheme: dark;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Segoe UI", "Arial Hebrew", Arial, "Noto Sans Hebrew", sans-serif;
+    line-height: 1.7;
+  }
+  .bar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    background: var(--bar);
+    border-bottom: 1px solid var(--line);
+  }
+  .bar button {
+    font: inherit;
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 56px;
+    height: 48px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--btn);
+    color: var(--fg);
+    cursor: pointer;
+  }
+  .bar button:active { transform: scale(0.97); }
+  .bar .theme { margin-inline-start: 8px; }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 20px 18px 80px;
+  }
+  h1 {
+    margin: 8px 0 22px;
+    text-align: center;
+    font-size: calc(var(--size) * 1.15);
+    color: var(--accent);
+    line-height: 1.3;
+  }
+  section {
+    font-size: var(--size);
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  section.chorus {
+    border-inline-start: 5px solid var(--accent);
+    padding-inline-start: 16px;
+    font-weight: 600;
+  }
+  section p { margin: 0; }
+  .hint {
+    text-align: center;
+    color: var(--muted);
+    font-size: 16px;
+    margin: 0 0 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="bar" role="toolbar" aria-label="הגדרות תצוגה">
+  <button id="smaller" aria-label="הקטן טקסט">A−</button>
+  <button id="bigger" aria-label="הגדל טקסט">A+</button>
+  <button id="theme" class="theme" aria-label="החלף בין מצב בהיר לכהה">☀︎ / ☾</button>
+</div>
+
+<main>
+  <h1>מריאן הי מריאן הא</h1>
+  <p class="hint">A− / A+ לשינוי גודל הכתב</p>
+
+  <section>
+    <p>
+      מריאן-הי, מריאן-הו<br>
+      מריאן-הו, מריאן-הא הא<br>
+      מריאן-הי, מריאן-הו<br>
+      מריאן-הו, מריאן-הא הא<br>
+      מריאן-הי, מריאן-הו<br>
+      מריאן-הו, מריאן-הא הא<br>
+      מריאן-הי, מריאן-הו<br>
+      מריאן-הו, מריאן-הא הא
+    </p>
+  </section>
+
+  <section>
+    <p>
+      הלו, שלום, זה מריאן (על) הכביש<br>
+      אור צהוב, לא משנה, מיד שם גז בטסלה<br>
+      הלו, הלו, (יותר) כריזמה מ-פיקאסו<br>
+      שוטר עוצר, כבר שולף דוח,<br>
+      בסוף מזמין אותו לבירה<br>
+      איזה צ׳ארמר, נו מה, נו מה יהיה?<br>
+      נו מה, נו מה יהיה? נו מה, נו מה, מה יהיה?<br>
+      פיסקו, וויסקי, (רק- ) אל תתנו לו תה,<br>
+      את כולם משקה, כי הוא כזה<br>
+      צלעות, ברכיים, נו מה, נו מה יהיה?<br>
+      נו מה, נו מה יהיה? נו מה, נו מה, מה יהיה?<br>
+      הצבי נמרח, והוא - חי על הקצה<br>
+      מריאן ממשיך, כי הוא כזה-ה
+    </p>
+  </section>
+
+  <section>
+    <p>
+      בישול? השתגעתם? יוצא לו - עקום<br>
+      הלו, גלית תבוא, תמלא לך צלחת.<br>
+      הלו, הלו, ארבעה בתים בניתם,<br>
+      תמיד אומרים, <bdi>it's the last one</bdi><br>
+      וש - עכשיו זה באמת
+    </p>
+  </section>
+
+  <section class="chorus">
+    <p>
+      איזה צ׳ארמר, נו מה, נו מה יהיה?<br>
+      נו מה, נו מה יהיה? נו מה, נו מה, מה יהיה?<br>
+      פיסקו, וויסקי, (רק- ) אל תתנו לו תה,<br>
+      את כולם משקה, כי הוא כזה<br>
+      עוד כוס יין, נו מה, נו מה יהיה?<br>
+      נו מה, נו מה יהיה? נו מה, נו מה, מה יהיה?<br>
+      תמיד צעיר, הוא חי על הקצה<br>
+      מריאן ממשיך, כי הוא כזה-ה
+    </p>
+  </section>
+
+  <section class="chorus">
+    <p>
+      איזה צ׳ארמר, נו מה, נו מה יהיה?<br>
+      נו מה, נו מה יהיה? נו מה, נו מה, מה יהיה?<br>
+      פיסקו, וויסקי, (רק- ) אל תתנו לו תה,<br>
+      את כולם משקה, כי הוא כזה<br>
+      עוד כוס יין, נו מה, נו מה יהיה?<br>
+      נו מה, נו מה יהיה? נו מה, נו מה, מה יהיה?<br>
+      תמיד צעיר, הוא חי על הקצה<br>
+      מריאן ממשיך, כי הוא כזה-ה
+    </p>
+  </section>
+</main>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var MIN = 18, MAX = 56, STEP = 4, DEFAULT = 28;
+
+  function load(key) {
+    try { return localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function save(key, val) {
+    try { localStorage.setItem(key, val); } catch (e) {}
+  }
+
+  // Text size
+  var size = parseInt(load("lyrics-size"), 10);
+  if (!(size >= MIN && size <= MAX)) size = DEFAULT;
+  function applySize() { root.style.setProperty("--size", size + "px"); }
+  applySize();
+  document.getElementById("bigger").onclick = function () {
+    size = Math.min(MAX, size + STEP); applySize(); save("lyrics-size", size);
+  };
+  document.getElementById("smaller").onclick = function () {
+    size = Math.max(MIN, size - STEP); applySize(); save("lyrics-size", size);
+  };
+
+  // Theme: follows the phone's setting until the person picks one
+  var theme = load("lyrics-theme");
+  if (theme !== "light" && theme !== "dark") {
+    theme = (window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light";
+  }
+  function applyTheme() { root.setAttribute("data-theme", theme); }
+  applyTheme();
+  document.getElementById("theme").onclick = function () {
+    theme = theme === "dark" ? "light" : "dark";
+    applyTheme(); save("lyrics-theme", theme);
+  };
+})();
+</script>
+</body>
+</html>
